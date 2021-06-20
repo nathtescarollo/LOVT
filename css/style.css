@@ -40,7 +40,7 @@ h4 {
 }
 
 main {
-    padding: 20px 45px;
+    padding: 0 45px;
 }
 
 section.showcase {
@@ -52,6 +52,7 @@ section.showcase {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 
 .showcase img {
@@ -114,7 +115,7 @@ section.promote {
 }
 
 section.categories {
-    margin: 50px 0 55px;
+    margin: 50px 0 60px;
 }
 
 .categories h2 {
@@ -122,29 +123,65 @@ section.categories {
     font-size: 25px;
     font-weight: normal;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .categories h3 {
     color: #FFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    font-size: 25px;
     font-weight: normal;
     text-align: center;
-    padding-top: 30px;
+    padding: 26.5px 0;
+    margin-top: 0;
+    margin-bottom: 13px;
 }
 
-.industrial {
+.industrial, .modern, .classic {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-industrial {
     background-image: url("../img/background-industrial.png");
-    background-blend-mode: 50%;
+    background-position: center;
+    opacity: 50%;
+    width: 100%;
     height: 80px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.modern {
+.bg-modern {
     background-image: url("../img/background-modern.png");
+    background-position: center;
+    opacity: 50%;
+    width: 100%;
     height: 80px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.classic {
+.bg-classic {
     background-image: url("../img/background-classic.png");
+    background-position: center;
+    opacity: 50%;
     height: 80px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 footer {
@@ -170,4 +207,39 @@ h5 {
 
 .social-media img {
     padding-right: 7px;
+}
+
+
+@media (max-width: 640px) {
+
+    main {
+        padding: 0 8vw;
+    }
+
+    section.showcase {
+        background-size: 100%;
+        height: 20vh;
+    }
+
+    section.promote {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 525px;
+    }
+
+    .house-new, .house-sale {
+        width: 250px;
+    }
+
+    .house-new img, .house-sale img {
+        width: 250px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .map {
+        padding-top: 30px;
+    }
 }
