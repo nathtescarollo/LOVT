@@ -224,15 +224,18 @@ h5 {
     section.promote {
         flex-direction: column;
         justify-content: space-between;
-        height: 525px;
     }
 
     .house-new, .house-sale {
-        width: 250px;
+        width: 70vw;
     }
 
     .house-new img, .house-sale img {
-        width: 250px;
+        width: 70vw;
+    }
+
+    .house-new {
+        margin-bottom: 30px;
     }
 
     footer {
